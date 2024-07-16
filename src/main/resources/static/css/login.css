@@ -1,0 +1,137 @@
+body {
+  background-color: #3f7bbe;
+  padding: 20px;
+}
+
+.container-fluid {
+  max-width: 100%;
+  margin-top: 50px;
+  padding: 0px;
+  background-color:#3f7bbe;
+  color: #f8f6f6;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  font-size: 15px;
+ }
+
+.form-group {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+#inicioDeSesion {
+margin: 10px 40px 10px 40px;
+background-color: #6359A0 ;
+border-radius: 30px;
+}
+
+#email, 
+#password {
+  width: 80%;
+  margin-left: 30px;
+  margin-right: 0px;
+  background-color: #EAE9F3;
+  color: rgb(24, 14, 0);
+  border-radius: 30px;
+}
+.btn-dark {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.botones{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h2 {
+  margin-top: 60px;
+}
+h3, 
+p {
+  margin-top: 20px; 
+  text-align: center;
+  font-size: medium;
+  color: rgb(212, 205, 196);
+  ;
+}
+.btn-light{
+  display:grid;
+  width: 50%;
+  margin:40px 110px;
+  background-color: #FFF8E1;
+  border-radius: 30px;
+  color: #6359A0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  font-size: 17px;
+}
+.col-md-9{
+  max-width: 100%;
+}
+.footer {
+  background-color: black;
+  margin-top: 20px;
+  padding: 20px;
+  }
+  .h2footer{
+  font-size: 80px;
+  }
+  .siguenos{
+  display: flex;
+  justify-content: center;
+  }
+  .social-media-icons{
+  display: flex;
+  justify-content:center;
+  }
+  .listaRedes{
+  list-style-type: none;
+  }
+  .listaRedes li {
+    flex-grow: 1;
+    margin: 0 5px; 
+    text-align: center; 
+  }
+  .listaRedes li a {
+    display: block;
+  }
+  .email,
+  .ws,
+  .fb,
+  .x,
+  .inst {
+    width: 100%;
+    height: auto;
+    max-width: 50px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 991px) {
+    .col-md-3{
+    width: 100%;
+    margin-top:10px;
+    margin-left: auto;
+    font-size: 15px;
+    }
+  }
+    @media screen and (min-width: 375px) and (max-width: 991px){
+    .col-md-9{
+    display: none;
+    }
+    }
+    @media screen and (min-width: 375px) and (max-width: 991px){
+    .h2footer {
+    font-size: 20px;
+    }
+    }
+    
+    @media screen and (min-width: 375px) and (max-width: 991px)  {
+    .email,
+    .ws,
+    .fb,
+    .x,
+    .inst {
+      width: 50%;
+      height: auto;
+      max-width: 50%;
+    }
+    }

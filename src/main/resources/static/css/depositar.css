@@ -1,0 +1,122 @@
+body {
+background-color: #3f7bbe;
+}
+.navbar-expand-lg{
+margin: 0px;
+font-size: 20px; 
+font-weight: bold;
+background-color: #f7f6f8;
+}
+.container-fluid {
+max-width: 100%;
+display: block;
+margin-top: 30px;
+background-color: #3f7bbe;
+align-items: center;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-size: 20px;
+text-align: center; 
+}
+.saldoYdeposito{
+margin: 50px 50px;
+height: 300px;
+background-color: #6359A0;
+padding-top: 40px;
+border-radius: 30px;
+color: #FFF8E1;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-size: 20px;
+text-align:center;
+}
+h1{
+color: #FFF8E1;
+margin: 80px 50px 20px 50px;
+}
+#montoADepositar{
+width: 70%;
+margin: 30px 20px;
+background-color: #f7f7fa;
+font-size: 20px;
+border-radius: 30px;
+}
+.form-group{
+margin: 30px 50px 10px 50px;
+}
+.btn-dark{
+margin: 5px 2px 20px 5px
+}
+.col-md-9{
+  max-width: 100%;
+}
+.footer {
+  background-color: black;
+  margin-top: 20px;
+  padding: 20px;
+  }
+  .h2footer{
+  font-size: 80px;
+  }
+  .siguenos{
+  display: flex;
+  justify-content: center;
+  }
+  .social-media-icons{
+  display: flex;
+  justify-content:center;
+  }
+  .listaRedes{
+  list-style-type: none;
+  }
+  .listaRedes li {
+    flex-grow: 1;
+    margin: 0 5px; 
+    text-align: center; 
+  }
+  .listaRedes li a {
+    display: block;
+  }
+  .email,
+  .ws,
+  .fb,
+  .x,
+  .inst {
+    width: 100%;
+    height: auto;
+    max-width: 50px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 991px) {
+    .col-md-3{
+    width: 100%;
+    margin-top:10px;
+    margin-left: auto;
+    font-size: 15px;
+    }
+  }
+    @media screen and (min-width: 375px) and (max-width: 991px){
+    .saldoYdeposito{
+      margin: 10px 30px;
+      height: 400px;
+    }
+  }
+    @media screen and (min-width: 375px) and (max-width: 991px){
+    .col-md-9{
+    display: none;
+    }
+    }
+    @media screen and (min-width: 375px) and (max-width: 991px){
+    .h2footer {
+    font-size: 20px;
+    }
+    }
+    
+    @media screen and (min-width: 375px) and (max-width: 991px)  {
+    .email,
+    .ws,
+    .fb,
+    .x,
+    .inst {
+      width: 50%;
+      height: auto;
+      max-width: 50%;
+    }
+    }

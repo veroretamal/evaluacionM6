@@ -1,0 +1,130 @@
+body {
+    background-color: #3f7bbe;
+    padding: 20px;
+  }
+    .navbar-expand-lg {
+    margin: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f7f6f8;
+  }
+  .container-fluid {
+    max-width: 100%;
+    margin-top: 30px;
+    background-color: #3f7bbe;
+    color: #fff8e1;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    text-align: center;
+    font-size: 15px;
+  .h2{
+    margin-top: 50px;
+  }
+    .form-group {
+    font-size: 20px;
+    background-color: #6359a0;
+    border-radius: 30px;
+  }
+table {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 10px; 
+    overflow: hidden; 
+    font-size: 15px;
+    border-style: hidden;
+  }
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #6359a0;
+  }
+  th {
+    background-color: #6359a0;
+    } 
+}
+.col-md-9{
+  max-width: 100%;
+}
+.footer {
+  background-color: black;
+  margin-top: 20px;
+  padding: 20px;
+  }
+  .h2footer{
+  font-size: 80px;
+  }
+  .siguenos{
+  display: flex;
+  justify-content: center;
+  }
+  .social-media-icons{
+  display: flex;
+  justify-content:center;
+  }
+  .listaRedes{
+  list-style-type: none;
+  }
+  .listaRedes li {
+  flex-grow: 1;
+  margin: 0 5px; 
+  text-align: center; 
+  }
+  .listaRedes li a {
+  display: block;
+  }
+  .email,
+  .ws,
+  .fb,
+  .x,
+  .inst {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  }
+  @media screen and (min-width: 576px) and (max-width: 991px) {
+    .col-md-3{
+    width: 100%;
+    margin-top:10px;
+    margin-left: auto;
+    font-size: 15px;
+    }
+  }
+  @media screen and (min-width: 375px) and (max-width: 991px){
+    .container-fluid {
+    max-width: 100%;
+    margin-top: 5px;
+    }
+  }
+  @media screen and (min-width: 375px) and (max-width: 991px){
+    table{
+  margin: 0px 0px 0px 5px;
+        }
+      }
+    @media screen and (min-width: 375px) and (max-width: 991px){
+    .h2{
+    margin: 0px 0px;
+    }
+  }
+    @media screen and (min-width: 375px) and (max-width: 991px){
+    .col-md-9{
+    display: none;
+    }
+    }
+    @media screen and (min-width: 375px) and (max-width: 991px){
+    .h2footer {
+    font-size: 20px;
+    }
+    }
+        @media screen and (min-width: 375px) and (max-width: 991px)  {
+    .email,
+    .ws,
+    .fb,
+    .x,
+    .inst {
+      width: 50%;
+      height: auto;
+      max-width: 50%;
+    }
+    }
