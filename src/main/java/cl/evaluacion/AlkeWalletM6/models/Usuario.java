@@ -19,23 +19,18 @@ public class Usuario {
     private String password;
     private int balance;
 
-    // Relación con cuentas
-    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+      @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Cuenta> cuentas = new ArrayList<>();
-
     public void addCuenta(Cuenta cuenta) {
         cuentas.add(cuenta);
         cuenta.setUsuario(this);
     }
-
-    // Relación con transacciones
     @OneToMany(mappedBy = "envio", cascade = CascadeType.ALL)
     private List<Transferencia> envio;
-
     @OneToMany(mappedBy = "recepcion", cascade = CascadeType.ALL)
     private List<Transferencia> recepcion;
 
-
+    //to String
     @Override
     public String toString() {
         return "Usuario{" +
@@ -47,7 +42,7 @@ public class Usuario {
                 ", balance=" + balance +
                 '}';
     }
-
+//getters y setters
     public Long getIdUsuario() {
         return idUsuario;
     }

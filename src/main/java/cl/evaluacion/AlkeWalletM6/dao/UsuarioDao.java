@@ -7,13 +7,13 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;
 
-
+//busca usuario almacenados
 @Repository
 public interface UsuarioDao extends JpaRepository<Usuario, Long> {
-    List<Usuario> findAll();
+    List<Usuario> findAll(); //todos los usuarios almacenados
 
-    Usuario findByEmail(String email);
+    Usuario findByEmail(String email); //busca con correo electronico
 
-    Optional<Usuario> findById(Long idUsuario);
+    Optional<Usuario> findById(Long idUsuario); //busca por su identificador
     }
 

@@ -16,11 +16,15 @@ public class RegistroController {
     @Autowired
     private UsuarioService usuarioService;
 
+    //Muestra el formulario de registro de usuario.
+
     @GetMapping
     public String mostrarFormularioRegistro(Model model) {
         model.addAttribute("usuario", new Usuario());
         return "registro";
     }
+
+    //Procesa la solicitud de registro de un nuevo usuario.
 
     @PostMapping
     public String registrarUsuario(Usuario usuario, Model model) {
@@ -34,4 +38,3 @@ public class RegistroController {
         return "redirect:/";
     }
 }
-

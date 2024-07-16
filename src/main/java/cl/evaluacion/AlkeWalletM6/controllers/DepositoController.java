@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+// Controlador para manejar las operaciones de depósito y retiro.
+
 @Controller
 @RequestMapping("/deposito")
 public class DepositoController {
@@ -27,19 +29,20 @@ public class DepositoController {
     public String showDeposito(Model model, HttpSession session) {
         Usuario usuarioActual = (Usuario) session.getAttribute("usuarioActual");
         usuarioActual = usuarioService.findByEmailWithCuentas(usuarioActual.getEmail());
-
         model.addAttribute("usuario", usuarioActual);
         return "deposito";
     }
 
+    // Procesa la transacción de depósito o retiro según la acción especificada.
+
     @PostMapping
-    public String transaction(int monto, String action, Model model, HttpSession session) {
-        // Obtener el usuario actual de la sesión
+    public String transaction(@RequestParam int monto, @RequestParam String action, Model model, HttpSession session) {
+        // Obtener el usuario logueado en la sesión actual
         Usuario usuarioActual = (Usuario) session.getAttribute("usuarioActual");
         usuarioActual = usuarioService.findByEmailWithCuentas(usuarioActual.getEmail());
 
         if (usuarioActual != null) {
-            Cuenta cuenta = usuarioActual.getCuentas().get(0); // Asumiendo que hay una cuenta
+            Cuenta cuenta = usuarioActual.getCuentas().get(0); // Se asume la primera cuenta relacionada al usuario
 
             if (action.equals("depositar")) {
                 cuenta.setSaldo(cuenta.getSaldo() + monto);
@@ -48,14 +51,14 @@ public class DepositoController {
                     cuenta.setSaldo(cuenta.getSaldo() - monto);
                 } else {
                     model.addAttribute("error", "Saldo insuficiente");
-                    return "deposito";
+                    return "deposito"; // Volver a la página de depósito con mensaje de error
                 }
             }
-            cuentaService.saveCuenta(cuenta);
+            cuentaService.saveCuenta(cuenta); // Guardar los cambios en la cuenta
             usuarioActual.setBalance(usuarioActual.getBalance() + (action.equals("depositar") ? monto : -monto));
-            usuarioService.saveUsuario(usuarioActual);
+            usuarioService.saveUsuario(usuarioActual); // Actualizar el balance del usuario
         }
 
-        return "redirect:/deposito";
+        return "redirect:/deposito"; // Redirigir a la página de depósito después de procesar la transacción
     }
 }

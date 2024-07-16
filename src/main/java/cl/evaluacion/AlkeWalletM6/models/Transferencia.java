@@ -16,14 +16,13 @@ public class Transferencia {
     @ManyToOne
     @JoinColumn(name = "envio")
     private Usuario envio;
-
     @ManyToOne
     @JoinColumn(name = "recepcion")
     private Usuario recepcion;
-
     private int monto;
     private Date fecha;
 
+    //To String
     @Override
     public String toString() {
         return "Transferencia{" +

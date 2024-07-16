@@ -23,12 +23,15 @@ public class HistorialController {
     @Autowired
     private UsuarioService usuarioService;
 
+    // Obtiene y muestra el historial de transferencias del usuario actual.
+
     @GetMapping
     public String getHistorial(Model model, HttpSession session) {
         Usuario usuarioActual = (Usuario) session.getAttribute("usuarioActual");
         model.addAttribute("usuario", usuarioActual);
-        List<Transferencia> transferencias = transferenciaService.getTransferenciasByUsuario(usuarioActual);
 
+        // Obtener la lista de transferencias del usuario actual
+        List<Transferencia> transferencias = transferenciaService.getTransferenciasByUsuario(usuarioActual);
         model.addAttribute("transferencias", transferencias);
 
         return "historial";

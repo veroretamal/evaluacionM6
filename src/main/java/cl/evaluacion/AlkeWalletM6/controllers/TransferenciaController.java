@@ -17,6 +17,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
+
 @Controller
 @RequestMapping("/transferencia")
 public class TransferenciaController {
@@ -30,16 +31,18 @@ public class TransferenciaController {
         this.transferenciaService = transferenciaService;
     }
 
+    // Muestra la página de transferencias, incluyendo el formulario para realizar una nueva transferencia.
+
     @GetMapping
     public String mostrarTransferencia(Model model, HttpSession session) {
         Usuario usuarioActual = (Usuario) session.getAttribute("usuarioActual");
         if (usuarioActual == null) {
-            return "redirect:/login";
+            return "redirect:/login"; // Redirige al inicio de sesión si no hay usuario en sesión
         }
         model.addAttribute("usuario", usuarioActual);
 
-        List<Usuario> usuarios = usuarioService.getAllUsuarios();
-        usuarios = usuarios.stream()
+        // Obtener todos los usuarios registrados excepto el usuario actual
+        List<Usuario> usuarios = usuarioService.getAllUsuarios().stream()
                 .filter(usuario -> !usuario.getEmail().equals(usuarioActual.getEmail()))
                 .collect(Collectors.toList());
 
@@ -51,11 +54,13 @@ public class TransferenciaController {
         return "transferencia";
     }
 
+    // Procesa la solicitud de realizar una transferencia de saldo entre usuarios.
+
     @PostMapping
     public String realizarTransferencia(@RequestParam int monto, @RequestParam String recepcion, Model model, HttpSession session, RedirectAttributes redirectAttributes) {
         Usuario usuarioActual = (Usuario) session.getAttribute("usuarioActual");
         if (usuarioActual == null) {
-            return "redirect:/login";
+            return "redirect:/login"; // Redirige al inicio de sesión si no hay usuario en sesión
         }
         Usuario usuarioDestino = usuarioService.findByEmail(recepcion);
         if (usuarioDestino == null) {
@@ -63,6 +68,7 @@ public class TransferenciaController {
             return "transferencia";
         }
 
+        // Verificar si el usuario tiene saldo suficiente para realizar la transferencia
         if (usuarioActual.getBalance() >= monto) {
             Transferencia transferencia = new Transferencia();
             transferencia.setEnvio(usuarioActual);
@@ -71,6 +77,7 @@ public class TransferenciaController {
             transferencia.setFecha(new Date());
             transferenciaService.saveTransferencia(transferencia);
 
+            // Actualizar los saldos de los usuarios involucrados en la transferencia
             usuarioActual.setBalance(usuarioActual.getBalance() - monto);
             usuarioDestino.setBalance(usuarioDestino.getBalance() + monto);
             usuarioService.saveUsuario(usuarioActual);

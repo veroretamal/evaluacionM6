@@ -9,13 +9,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 @Controller
 @RequestMapping("/inicio")
 public class InicioController {
 
     @Autowired
     UsuarioService usuarioService;
+
+    // Muestra la página de inicio del usuario actual, actualizando su información de cuenta si está logueado.
 
     @GetMapping
     public String showInicio(Model model, HttpSession session) {
@@ -32,6 +33,8 @@ public class InicioController {
         }
         return "inicio";
     }
+
+    // Invalida la sesión actual del usuario, redirigiéndolo a la página de inicio de sesión.
 
     @GetMapping("/logout")
     public String logout(HttpSession session) {

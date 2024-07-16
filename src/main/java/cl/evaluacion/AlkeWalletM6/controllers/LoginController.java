@@ -12,19 +12,21 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import jakarta.servlet.http.HttpSession;
 import java.util.Optional;
-
 @Controller
 public class LoginController {
 
     @Autowired
     UsuarioService usuarioService;
 
+    //Página de inicio de sesión con un formulario para ingresar credenciales.
 
-    @GetMapping("/")
+    @GetMapping("/login")
     public String showLogin(Model model) {
         model.addAttribute("usuario", new Usuario());
         return "index";
     }
+
+    // Lógica de inicio de sesión, validando las credenciales ingresadas.
 
     @PostMapping("/login")
     public String login(Usuario usuario, Model model, HttpSession session) {
