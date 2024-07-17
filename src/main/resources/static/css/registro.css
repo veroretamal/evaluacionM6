@@ -2,108 +2,100 @@ body {
 background-color: #3f7bbe;
 padding: 20px;
 }
-.container-fluid {
-max-width: 100%;
-margin-top: 10px;
-background-color: #3f7bbe;
-color: #eeede9;
-font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-text-align: center;
+.navbar-expand-lg{
 font-size: 15px;
+font-weight: bold;
+background-color: #f7f6f8;
 }
-.titulo-md3{
-margin-top: 30px;
-}
-.form-group {
-font-size: 20px;
-margin-top: 10px;
-width: 80%;
-max-width: 80%;
-margin-left: 30px;
-background-color: #6359a0;
-color: black;
-}
-#crearUsuarioForm {
+.container-fluid {
+max-width: 1200px;
 margin: 20px auto;
-background-color: #6359a0;
-border-radius: 30px;
-width: 80%;
-max-width: 80%;
+padding: 20px;
+background-color: #3f7bbe;
+color: #FFF8E1;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+text-align: center;
+font-size: 13px;
 }
-.btn-dark {
-margin-top: 20px;
-margin-bottom: 20px;
-width: auto;
+
+.bienvenidaUsuario{
+margin: 100px 30px 70px 30px;
+background-color: #6359A0 ;
+border-radius: 30px;
+padding:30px;
+max-width: 600px;
+    width: 100%;
+     text-align: center;
+}
+.btn-dark{
+margin: 5px 2px 20px 5px;
 }
 .col-md-9{
   max-width: 100%;
 }
 .footer {
-background-color: black;
-margin-top: 20px;
-padding: 20px;
-}
-.h2footer{
-font-size: 80px;
-}
-.siguenos{
+  background-color: black;
+  margin-top: 20px;
+  padding: 20px;
+  }
+  .h2footer{
+  font-size: 60px;
+  }
+  .siguenos{
   display: flex;
   justify-content: center;
   }
-.social-media-icons{
+  .social-media-icons{
   display: flex;
   justify-content:center;
   }
-.listaRedes{
-list-style-type: none;
-}
-.listaRedes li {
-  flex-grow: 1;
-  margin: 0 5px; 
-  text-align: center; 
-}
-.listaRedes li a {
-  display: block;
-}
-.email,
-.ws,
-.fb,
-.x,
-.inst {
-  width: 100%;
-  height: auto;
-  max-width: 50px;
-}
-@media screen and (min-width: 576px) and (max-width: 991px) {
-  .col-md-3{
-  width: 100%;
-  margin-top:auto;
-  margin-left: auto;
-  font-size: 15px;
-  }}
-  @media screen and (min-width: 576px) and (max-width: 991px){
-  .col-md-9{
-  display: none;
+  .listaRedes{
+  list-style-type: none;
   }
+  .listaRedes li {
+    flex-grow: 1;
+    margin: 0 5px;
+    text-align: center;
   }
-  @media screen and (max-width: 576px) {
-  .h2footer {
-  font-size: 20px;
+  .listaRedes li a {
+    display: block;
   }
-  }
-  @media screen and (min-width: 768px) and (max-width: 991px)  {
-  .h2footer {
-  font-size: 20px;
-  }
-  }
-  @media screen and (min-width: 576px) and (max-width: 991px)  {
   .email,
   .ws,
   .fb,
   .x,
   .inst {
-    width: 50%;
+    width: 100%;
     height: auto;
     max-width: 50px;
   }
+  @media screen and (min-width: 576px) and (max-width: 991px) {
+    .col-md-3{
+    width: 100%;
+    margin-top:10px;
+    margin-left: auto;
+    font-size: 15px;
+    }
   }
+    @media screen and (min-width: 375px) and (max-width: 991px){
+    .col-md-9{
+    display: none;
+    }
+    }
+    @media screen and (min-width: 375px) and (max-width: 991px){
+    .h2footer {
+    font-size: 20px;
+    }
+    }
+
+    @media screen and (min-width: 375px) and (max-width: 991px)  {
+    .email,
+    .ws,
+    .fb,
+    .x,
+    .inst {
+      width: 50%;
+      height: auto;
+      max-width: 50%;
+    }
+    }

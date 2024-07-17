@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 //Entidad Cuenta en la base de datos.
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor

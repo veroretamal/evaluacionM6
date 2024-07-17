@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 //Entidad Transferencia
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor

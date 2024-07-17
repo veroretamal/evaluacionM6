@@ -1,70 +1,34 @@
 body {
-  background-color: #3f7bbe;
-  padding: 20px;
+background-color: #3f7bbe;
+padding: 20px;
 }
-
+.navbar-expand-lg{
+font-size: 15px;
+font-weight: bold;
+background-color: #f7f6f8;
+}
 .container-fluid {
-  max-width: 100%;
-  margin-top: 50px;
-  padding: 0px;
-  background-color:#3f7bbe;
-  color: #f8f6f6;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  text-align: center;
-  font-size: 15px;
- }
-
-.form-group {
-  font-size: 20px;
-  margin-top: 30px;
+max-width: 1200px;
+margin: 20px auto;
+padding: 20px;
+background-color: #3f7bbe;
+color: #FFF8E1;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+text-align: center;
+font-size: 13px;
 }
 
-#inicioDeSesion {
-margin: 10px 40px 10px 40px;
+.bienvenidaUsuario{
+margin: 100px 30px 70px 30px;
 background-color: #6359A0 ;
 border-radius: 30px;
+padding:30px;
+max-width: 600px;
+    width: 100%;
+     text-align: center;
 }
-
-#email, 
-#password {
-  width: 80%;
-  margin-left: 30px;
-  margin-right: 0px;
-  background-color: #EAE9F3;
-  color: rgb(24, 14, 0);
-  border-radius: 30px;
-}
-.btn-dark {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.botones{
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-h2 {
-  margin-top: 60px;
-}
-h3, 
-p {
-  margin-top: 20px; 
-  text-align: center;
-  font-size: medium;
-  color: rgb(212, 205, 196);
-  ;
-}
-.btn-light{
-  display:grid;
-  width: 50%;
-  margin:40px 110px;
-  background-color: #FFF8E1;
-  border-radius: 30px;
-  color: #6359A0;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  text-align: center;
-  font-size: 17px;
+.btn-dark{
+margin: 5px 2px 20px 5px;
 }
 .col-md-9{
   max-width: 100%;
@@ -75,7 +39,7 @@ p {
   padding: 20px;
   }
   .h2footer{
-  font-size: 80px;
+  font-size: 60px;
   }
   .siguenos{
   display: flex;
@@ -90,8 +54,8 @@ p {
   }
   .listaRedes li {
     flex-grow: 1;
-    margin: 0 5px; 
-    text-align: center; 
+    margin: 0 5px;
+    text-align: center;
   }
   .listaRedes li a {
     display: block;
@@ -123,7 +87,7 @@ p {
     font-size: 20px;
     }
     }
-    
+
     @media screen and (min-width: 375px) and (max-width: 991px)  {
     .email,
     .ws,

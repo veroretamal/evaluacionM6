@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 //Entidad Usuario
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor

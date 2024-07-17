@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 //busca usuario almacenados
+
 @Repository
 public interface UsuarioDao extends JpaRepository<Usuario, Long> {
     List<Usuario> findAll(); //todos los usuarios almacenados

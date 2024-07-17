@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 //Gestiona operaciones relacionadas con la entidad Cuenta.
+
 @Service
 public class CuentaService {
 
